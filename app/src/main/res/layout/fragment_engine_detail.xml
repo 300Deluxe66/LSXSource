@@ -7,41 +7,133 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/engine_displacement"
+        android:id="@+id/engine_displacement_text"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
-        android:text="displacement" />
+        android:text="Displacement"
+        android:textColor="#d9d9d9" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/engine_displacement"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/engine_displacement_text"
+        android:text="displacement"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/engine_horsepower_text"
+        android:layout_below="@id/engine_displacement"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:text="Horsepower"
+        android:textColor="#d9d9d9" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/engine_horsepower"
-        android:layout_below="@id/engine_displacement"
+        android:layout_below="@id/engine_horsepower_text"
         android:layout_alignParentLeft="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:text="horsepower"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/engine_torque_text"
+        android:layout_below="@id/engine_horsepower"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="15dp"
         android:layout_marginLeft="20dp"
-        android:text="horsepower" />
+        android:text="Torque"
+        android:textColor="#d9d9d9" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/engine_torque"
-        android:layout_below="@id/engine_horsepower"
+        android:layout_below="@id/engine_torque_text"
         android:layout_alignParentLeft="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:text="torque"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/engine_compression_text"
+        android:layout_below="@id/engine_torque"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="15dp"
         android:layout_marginLeft="20dp"
-        android:text="torque" />
+        android:text="Compression"
+        android:textColor="#d9d9d9" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/engine_compression"
-        android:layout_below="@id/engine_torque"
+        android:layout_below="@id/engine_compression_text"
         android:layout_alignParentLeft="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:text="compression"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/engine_bore_text"
+        android:layout_below="@id/engine_compression"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="15dp"
         android:layout_marginLeft="20dp"
-        android:text="compression" />
+        android:text="Bore"
+        android:textColor="#d9d9d9" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/engine_bore"
+        android:layout_below="@id/engine_bore_text"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
+        android:text="bore"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/engine_stroke_text"
+        android:layout_below="@id/engine_bore"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:text="Stroke"
+        android:textColor="#d9d9d9" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/engine_stroke"
+        android:layout_below="@id/engine_stroke_text"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
+        android:text="stroke"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
 
 </RelativeLayout>

@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.newapp.lsxsource.dummy.DummyContent;
+import com.newapp.lsxsource.engine.EngineContent;
 
 /**
  * A fragment representing a single Engine detail screen.
@@ -27,7 +27,7 @@ public class EngineDetailFragment extends Fragment {
     /**
      * The dummy content this fragment is presenting.
      */
-    private DummyContent.DummyItem mItem;
+    private EngineContent.Engine mItem;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -44,7 +44,7 @@ public class EngineDetailFragment extends Fragment {
             // Load the dummy content specified by the fragment
             // arguments. In a real-world scenario, use a Loader
             // to load content from a content provider.
-            mItem = DummyContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+            mItem = EngineContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
 
             Activity activity = this.getActivity();
             CollapsingToolbarLayout appBarLayout = (CollapsingToolbarLayout) activity.findViewById(R.id.toolbar_layout);
@@ -65,6 +65,10 @@ public class EngineDetailFragment extends Fragment {
             ((TextView) rootView.findViewById(R.id.engine_horsepower)).setText(mItem.horsepower);
             ((TextView) rootView.findViewById(R.id.engine_torque)).setText(mItem.torque);
             ((TextView) rootView.findViewById(R.id.engine_compression)).setText(mItem.compression);
+            ((TextView) rootView.findViewById(R.id.engine_bore)).setText(mItem.bore);
+            ((TextView) rootView.findViewById(R.id.engine_stroke)).setText(mItem.stroke);
+
+
 
 
         }

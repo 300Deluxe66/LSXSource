@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.newapp.lsxsource.dummy.DummyContent;
+import com.newapp.lsxsource.engine.EngineContent;
 
 /**
  * A list fragment representing a list of Engines. This fragment
@@ -71,11 +71,11 @@ public class EngineListFragment extends ListFragment {
         super.onCreate(savedInstanceState);
 
         // TODO: replace with a real list adapter.
-        setListAdapter(new ArrayAdapter<DummyContent.DummyItem>(
+        setListAdapter(new ArrayAdapter<EngineContent.Engine>(
                 getActivity(),
                 android.R.layout.simple_list_item_activated_1,
                 android.R.id.text1,
-                DummyContent.ITEMS));
+                EngineContent.ITEMS));
     }
 
     @Override
@@ -115,7 +115,7 @@ public class EngineListFragment extends ListFragment {
 
         // Notify the active callbacks interface (the activity, if the
         // fragment is attached to one) that an item has been selected.
-        mCallbacks.onItemSelected(DummyContent.ITEMS.get(position).id);
+        mCallbacks.onItemSelected(EngineContent.ITEMS.get(position).id);
     }
 
     @Override
