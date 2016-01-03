@@ -7,10 +7,52 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/engine_displacement_text"
+        android:id="@+id/engine_gen_text"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:text="Generation"
+        android:textColor="#d9d9d9" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/engine_gen"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/engine_gen_text"
+        android:text="generation"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/engine_volume_text"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/engine_gen"
+        android:layout_marginLeft="20dp"
+        android:text="Volume"
+        android:textColor="#d9d9d9" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/engine_volume"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/engine_volume_text"
+        android:text="volume"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/engine_displacement_text"
+        android:layout_below="@+id/engine_volume"
+        android:layout_alignParentLeft="true"
         android:layout_marginLeft="20dp"
         android:text="Displacement"
         android:textColor="#d9d9d9" />
@@ -21,7 +63,7 @@
         android:id="@+id/engine_displacement"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="30dp"
-        android:layout_below="@id/engine_displacement_text"
+        android:layout_below="@+id/engine_displacement_text"
         android:text="displacement"
         android:textColor="#FFFFFF"
         android:textStyle="bold" />
@@ -32,7 +74,6 @@
         android:id="@+id/engine_horsepower_text"
         android:layout_below="@id/engine_displacement"
         android:layout_alignParentLeft="true"
-        android:layout_marginTop="15dp"
         android:layout_marginLeft="20dp"
         android:text="Horsepower"
         android:textColor="#d9d9d9" />
@@ -54,7 +95,6 @@
         android:id="@+id/engine_torque_text"
         android:layout_below="@id/engine_horsepower"
         android:layout_alignParentLeft="true"
-        android:layout_marginTop="15dp"
         android:layout_marginLeft="20dp"
         android:text="Torque"
         android:textColor="#d9d9d9" />
@@ -76,7 +116,6 @@
         android:id="@+id/engine_compression_text"
         android:layout_below="@id/engine_torque"
         android:layout_alignParentLeft="true"
-        android:layout_marginTop="15dp"
         android:layout_marginLeft="20dp"
         android:text="Compression"
         android:textColor="#d9d9d9" />
@@ -98,7 +137,6 @@
         android:id="@+id/engine_bore_text"
         android:layout_below="@id/engine_compression"
         android:layout_alignParentLeft="true"
-        android:layout_marginTop="15dp"
         android:layout_marginLeft="20dp"
         android:text="Bore"
         android:textColor="#d9d9d9" />
@@ -120,7 +158,6 @@
         android:id="@+id/engine_stroke_text"
         android:layout_below="@id/engine_bore"
         android:layout_alignParentLeft="true"
-        android:layout_marginTop="15dp"
         android:layout_marginLeft="20dp"
         android:text="Stroke"
         android:textColor="#d9d9d9" />
@@ -136,4 +173,11 @@
         android:textColor="#FFFFFF"
         android:textStyle="bold" />
 
+    <android.support.design.widget.FloatingActionButton android:id="@+id/fab"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|start" android:layout_margin="@dimen/fab_margin"
+        android:layout_alignParentRight="true"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:src="@drawable/auto" />
 </RelativeLayout>

@@ -1,5 +1,6 @@
 package com.newapp.lsxsource;
 
+import android.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +10,8 @@ import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.v4.app.NavUtils;
 import android.view.MenuItem;
+
+import com.newapp.lsxsource.engine.EngineContent;
 
 /**
  * An activity representing a single Engine detail screen. This
@@ -27,7 +30,6 @@ public class EngineDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_engine_detail);
         Toolbar toolbar = (Toolbar) findViewById(R.id.detail_toolbar);
         setSupportActionBar(toolbar);
-
 
 
         // Show the Up button in the action bar.
@@ -54,7 +56,24 @@ public class EngineDetailActivity extends AppCompatActivity {
                     .add(R.id.engine_detail_container, fragment)
                     .commit();
         }
-}
+    }
+
+    public void onClick(View view) {
+        Bundle engineData = getIntent().getExtras();
+        String engineId = engineData.getString(EngineDetailFragment.ARG_ITEM_ID);
+        EngineContent.Engine mItem;
+        mItem = EngineContent.ITEM_MAP.get(engineId);
+
+        final Snackbar snackBar = Snackbar.make(view, mItem.applications, Snackbar.LENGTH_INDEFINITE);
+
+        snackBar.setAction("Close", new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                snackBar.dismiss();
+            }
+        });
+        snackBar.show();
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

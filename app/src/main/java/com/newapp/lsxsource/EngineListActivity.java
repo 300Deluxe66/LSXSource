@@ -64,6 +64,14 @@ public class EngineListActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
         toolbar.setTitle(getTitle());
 
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Compare Feature", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show();
+            }
+        });
 
         if (findViewById(R.id.engine_detail_container) != null) {
             // The detail container view will be present only in the

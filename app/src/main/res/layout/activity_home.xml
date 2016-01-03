@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.newapp.lsxsource.Home">
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:id="@+id/aluminum"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/aluminum"
+        android:onClick="onClick"
+        />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:id="@+id/vortec"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/vortec"
+        android:onClick="onClick"
+        />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:id="@+id/lsx"
+        android:background="@drawable/lsx"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick"/>
+</RelativeLayout>

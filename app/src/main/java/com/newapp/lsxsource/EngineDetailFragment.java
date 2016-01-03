@@ -1,8 +1,11 @@
 package com.newapp.lsxsource;
 
+import android.support.v7.app.AppCompatActivity;
 import android.app.Activity;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -45,7 +48,6 @@ public class EngineDetailFragment extends Fragment {
             // arguments. In a real-world scenario, use a Loader
             // to load content from a content provider.
             mItem = EngineContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
-
             Activity activity = this.getActivity();
             CollapsingToolbarLayout appBarLayout = (CollapsingToolbarLayout) activity.findViewById(R.id.toolbar_layout);
             if (appBarLayout != null) {
@@ -61,6 +63,9 @@ public class EngineDetailFragment extends Fragment {
 
         // Show the dummy content as text in a TextView.
         if (mItem != null) {
+
+            ((TextView) rootView.findViewById(R.id.engine_gen)).setText(mItem.gen);
+            ((TextView) rootView.findViewById(R.id.engine_volume)).setText(mItem.volume);
             ((TextView) rootView.findViewById(R.id.engine_displacement)).setText(mItem.displacement);
             ((TextView) rootView.findViewById(R.id.engine_horsepower)).setText(mItem.horsepower);
             ((TextView) rootView.findViewById(R.id.engine_torque)).setText(mItem.torque);
@@ -68,11 +73,7 @@ public class EngineDetailFragment extends Fragment {
             ((TextView) rootView.findViewById(R.id.engine_bore)).setText(mItem.bore);
             ((TextView) rootView.findViewById(R.id.engine_stroke)).setText(mItem.stroke);
 
-
-
-
         }
-
         return rootView;
     }
 }
