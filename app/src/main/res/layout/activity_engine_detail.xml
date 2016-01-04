@@ -30,5 +30,20 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:background="#50575D" />
 
+    <android.support.design.widget.FloatingActionButton android:id="@+id/fab"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|start" android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/auto"
+        android:clickable="true"
+        android:onClick="onClick"
+        app:layout_anchor="@+id/engine_detail_container" app:layout_anchorGravity="top|end" />
+    <android.support.design.widget.FloatingActionButton android:id="@+id/fab2"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|start"
+        android:layout_marginRight="80dp"
+        android:src="@drawable/compare"
+        android:clickable="true"
+        android:onClick="onClick2"
+        app:layout_anchor="@+id/engine_detail_container" app:layout_anchorGravity="top|end" />
 
 </android.support.design.widget.CoordinatorLayout>
